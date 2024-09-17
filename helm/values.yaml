@@ -1,0 +1,14 @@
+global:
+  domain: "offli.eu"
+admin-api:
+  image: 
+    tag: "0.1.0-e1f8a27" # Init tag
+  aspNetCoreEnv: "Production"
+  efMigrate: false
+  
+# Change PVC reclaim policy to retain - needed to do manually: https://kubernetes.io/docs/tasks/administer-cluster/change-pv-reclaim-policy/
+postgresql:
+  auth:
+    database: dolacna
+    username: test
+    password: test

@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ .Release.Name }}-admin-api-app
+  namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: admin-api=jurajpaska8/dolacna-admin-api
+    argocd-image-updater.argoproj.io/write-back-method: git
+
+spec:
+  project: {{ "projectName" | quote }}
+  source:
+    path: {{ "helm" | quote }}
+    repoURL: {{ "https://github.com/Do-lacna/webcloud.git" | quote }}
+    targetRevision: {{ "master" | quote }}
+    helm:
+      valueFiles:
+        - values.yaml
+
+  destination:
+    namespace: {{ "default" | quote }}
+    name: {{ "destinationName" | quote }}
+{{/*  TODO*/}}

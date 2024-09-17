@@ -1,0 +1,7 @@
+image:
+  repository: offli/dolacna-admin-api
+  tag: "OverrideMeInValues"
+  pullPolicy: IfNotPresent
+
+aspNetCoreEnv: "Production"
+efMigrate: false
