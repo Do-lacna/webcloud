@@ -8,15 +8,16 @@ metadata:
     argocd-image-updater.argoproj.io/write-back-method: git
 
 spec:
-  project: {{ "projectName" | quote }}
+  project: projectName
   source:
-    path: {{ "helm" | quote }}
-    repoURL: {{ "https://github.com/Do-lacna/webcloud.git" | quote }}
-    targetRevision: {{ "master" | quote }}
+    path: helm
+    repoURL: https://github.com/Do-lacna/webcloud.git
+    targetRevision: aster
     helm:
       valueFiles:
         - values.yaml
-      releaseName: {{ "releaseName" | quote }}
+      releaseName: releaseName
   destination:
-    namespace: {{ "default" | quote }}
-    name: {{ "destinationName" | quote }}
+    server: https://kubernetes.default.svc
+    namespace: default
+    name: destinationName
