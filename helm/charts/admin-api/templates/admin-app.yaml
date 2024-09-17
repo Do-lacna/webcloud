@@ -8,10 +8,10 @@ metadata:
     argocd-image-updater.argoproj.io/write-back-method: git
 
 spec:
-  project: projectName
+  project: default
   source:
     path: helm
-    repoURL: https://github.com/Do-lacna/webcloud.git
+    repoURL: https://github.com/Do-lacna/webcloud
     targetRevision: master
     helm:
       valueFiles:
