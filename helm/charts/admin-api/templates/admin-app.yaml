@@ -12,7 +12,7 @@ spec:
   source:
     path: helm
     repoURL: https://github.com/Do-lacna/webcloud.git
-    targetRevision: aster
+    targetRevision: master
     helm:
       valueFiles:
         - values.yaml
