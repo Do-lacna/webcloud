@@ -16,7 +16,7 @@ spec:
     helm:
       valueFiles:
         - values.yaml
-      releaseName: releaseName
+      releaseName: releasename
   destination:
     server: https://kubernetes.default.svc
     namespace: default
