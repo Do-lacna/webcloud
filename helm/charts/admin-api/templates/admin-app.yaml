@@ -4,7 +4,7 @@ metadata:
   name: {{ .Release.Name }}-admin-api-app
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: admin-api=offli /dolacna-admin-api
+    argocd-image-updater.argoproj.io/image-list: offli/dolacna-admin-api
     argocd-image-updater.argoproj.io/write-back-method: git
 
 spec:
