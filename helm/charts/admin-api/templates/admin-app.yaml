@@ -4,7 +4,7 @@ metadata:
   name: {{ .Release.Name }}-admin-api-app
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: admin-api=jurajpaska8/dolacna-admin-api
+    argocd-image-updater.argoproj.io/image-list: admin-api=offli /dolacna-admin-api
     argocd-image-updater.argoproj.io/write-back-method: git
 
 spec:
@@ -16,8 +16,7 @@ spec:
     helm:
       valueFiles:
         - values.yaml
-
+      releaseName: {{ "releaseName" | quote }}
   destination:
     namespace: {{ "default" | quote }}
     name: {{ "destinationName" | quote }}
-{{/*  TODO*/}}
