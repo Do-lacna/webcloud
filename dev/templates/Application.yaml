@@ -10,7 +10,8 @@ metadata:
 spec:
   project: default
   source:
-    path: admin-api
+    # TODO env (cluster) / appName
+    path: dev/admin-api
     repoURL: git@github.com:Do-lacna/webcloud.git
     targetRevision: master
     helm:
