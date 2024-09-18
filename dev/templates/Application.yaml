@@ -10,7 +10,7 @@ metadata:
 spec:
   project: default
   source:
-    path: helm
+    path: admin-api
     repoURL: git@github.com:Do-lacna/webcloud.git
     targetRevision: master
     helm:
