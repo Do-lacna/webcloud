@@ -1,0 +1,44 @@
+#squad: "essa"
+#sourceRepo: https://bitbucket.org/cid-code/essa-cluster-manifests.git
+#harborRepository: "harbor.cid-dev.net/es-essa/"
+#
+## You can find the list of possible notification triggers at https://argocd-notifications.readthedocs.io/en/stable/catalog/#triggers
+## then you can add them to notifications/alerts/alertsProd arrays of the cluster to specify where such notifications/alerts should be routed within slack
+## Multiple channels can be defined, using semicolon (;) as a separator, e.g. 'my-channel1;my-channel2'
+#slackChannels:
+#  notifications: "escid-essa-argo-notifications"
+#  alerts: "escid-essa-alert"
+#  alertsProd: "escid-essa-alert-prod"
+#
+## To add an application to a cluster, simply add a new application with at least one nanoservice and specify its name and image (from harbor).
+## The nanoservice name should be just alphanumeric characters, no special characters.
+## This name is also used as a helm alias, which you need to use within dev/qa/sta/sim/prd branch as an alias for the essa-nanoservice chart dependency
+## In Chart.yaml of basketreadmodelservice (dev/qa/... branches), you'd use it like this:
+## dependencies:
+##  - name: "essa-nanoservice"
+##    repository: "https://harbor.cid-dev.net/chartrepo/es-public"
+##    version: "1.4.0"
+##    alias: "basketreadmodelservice" # <---- the same as the application name within this file
+#clusters:
+#  - name: essa-dev-es
+#    branchOverride: development
+#    urlSuffix: -dev
+#    domain: int
+#    environment: dev
+#    longEnvironment: dev
+#    region: pks
+#    imageUpdater:
+#      strategy: latest
+#      allowTags: "regexp:^(0|[1-9]\\d*).(0|[1-9]\\d*).(0|[1-9]\\d*)(?:-(?:alpha.*|beta.*|rc.*))?$"
+#      automatedSync: true
+#    alerts:
+#      - on-sync-status-unknown
+#      - on-health-degraded
+#      - on-sync-failed
+#    destinationNamespaces:
+#      - "datamesh-system"
+#    applications:
+#      - name: testapp
+#        nanoservices:
+#          - name: "testapp"
+#            image: "escid.essa.testapp"
