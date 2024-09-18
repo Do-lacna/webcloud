@@ -6,8 +6,6 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/image-list: offli/dolacna-admin-api
     argocd-image-updater.argoproj.io/write-back-method: git
-    # TODO semver - latest is not deployed everytime
-    argocd-image-updater.argoproj.io/admin-api.update-strategy: semver
 
 spec:
   project: default
