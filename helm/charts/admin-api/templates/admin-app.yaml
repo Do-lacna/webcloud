@@ -16,7 +16,7 @@ spec:
     helm:
       valueFiles:
         - values.yaml
-      releaseName: releasename
+      releaseName: dolacna
   destination:
     server: https://kubernetes.default.svc
     namespace: default
