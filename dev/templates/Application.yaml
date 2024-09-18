@@ -11,7 +11,7 @@ spec:
   project: default
   source:
     # TODO env (cluster) / appName
-    path: dev/admin-api
+    path: "dev/admin-api"
     repoURL: git@github.com:Do-lacna/webcloud.git
     targetRevision: master
     helm:
