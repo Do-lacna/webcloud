@@ -2,7 +2,7 @@ global:
   domain: "offli.eu"
 image:
   repository: offli/dolacna-admin-api
-  tag: "OverrideMeInValues"
+  tag: "0.1.0-0"
   pullPolicy: IfNotPresent
 
 aspNetCoreEnv: "Production"
