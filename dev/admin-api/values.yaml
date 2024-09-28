@@ -6,4 +6,4 @@ image:
   pullPolicy: IfNotPresent
 
 aspNetCoreEnv: "Development"
-efMigrate: false
+efMigrate: true
