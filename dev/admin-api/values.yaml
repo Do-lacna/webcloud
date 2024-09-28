@@ -5,6 +5,5 @@ image:
   tag: "0.1.0-0"
   pullPolicy: IfNotPresent
 
-# TODO change to Production and add override files
 aspNetCoreEnv: "Development"
 efMigrate: false
