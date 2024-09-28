@@ -14,4 +14,4 @@ metadata:
   name: {{ .Release.Name }}-admin-api
 type: Opaque
 data:
-  CONNECTIONSTRINGS__CONTEXT: {{ "Server=dolacna-postgresql;Port=5432;Database=dolacna;User Id=test;Password=test;" | b64enc }}
+  CONNECTIONSTRINGS__CONTEXT: {{ "Server=infra-postgresql;Port=5432;Database=dolacna;User Id=test;Password=test;" | b64enc }}
