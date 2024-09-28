@@ -8,6 +8,6 @@ dependencies:
   - name: postgresql
     version: 13.2.5
     repository: https://charts.bitnami.com/bitnami
-  - name: minio
-    version: 14.3.0
-    repository: https://charts.bitnami.com/bitnami
+#  - name: minio
+#    version: 14.3.0
+#    repository: https://charts.bitnami.com/bitnami
