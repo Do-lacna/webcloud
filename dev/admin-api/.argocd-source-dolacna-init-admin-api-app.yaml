@@ -4,5 +4,5 @@ helm:
     value: offli/dolacna-admin-api
     forcestring: true
   - name: image.tag
-    value: 0.1.0-36
+    value: 0.1.0-37
     forcestring: true
