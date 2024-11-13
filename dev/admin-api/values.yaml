@@ -5,5 +5,9 @@ image:
   tag: "0.1.0-0"
   pullPolicy: IfNotPresent
 
+# TODO do not include appsettings.{ENV} to k8s deployments - use empty appsettings and override everyting in config map. For that another env will be needed (to differ between ENV and appsettings)
 aspNetCoreEnv: "Development"
+publicKey: "myKey"
+authenticationMode: "Disabled"
+# TODO back to false
 efMigrate: true
