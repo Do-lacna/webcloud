@@ -16,4 +16,5 @@ type: Opaque
 data:
   CONNECTIONSTRINGS__DOLACNACONTEXT: {{ "Server=infra-postgresql;Port=5432;Database=dolacna;User Id=test;Password=test;" | b64enc }}
   AUTHENTICATION__MODE: {{ .Values.authenticationMode | b64enc }}
-  AUTHENTICATION__PUBLICKEY: {{ .Values.publicKey | b64enc }}
+  AUTHENTICATION__AUDIENCE: {{ .Values.audience | b64enc }}
+  AUTHENTICATION__ISSUER: {{ .Values.issuer | b64enc }}
