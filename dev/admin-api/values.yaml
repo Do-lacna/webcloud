@@ -9,6 +9,6 @@ image:
 aspNetCoreEnv: "Development"
 issuer: "myKey"
 audience: "myKey"
-authenticationMode: "Disabled"
+authenticationMode: "Enabled"
 # TODO back to false
 efMigrate: true
